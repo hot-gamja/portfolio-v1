@@ -1,4 +1,4 @@
-mexport const projects = [
+export const projects = [
   {
     id: '01',
     title: 'Blog Platform',
