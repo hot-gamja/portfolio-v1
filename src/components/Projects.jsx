@@ -12,7 +12,7 @@ function ProjectChapter({ project }) {
 
           {/* Left: meta */}
           <div>
-            <p className={`text-7xl lg:text-8xl font-semibold tracking-[-0.05em] leading-none mb-6 ${isDark ? 'text-coal-line' : 'text-line'}`}>
+            <p className={`text-6xl lg:text-7xl font-semibold tracking-[-0.05em] leading-none mb-6 ${isDark ? 'text-coal-line' : 'text-line'}`}>
               {project.id}
             </p>
             <h3 className={`text-2xl lg:text-3xl font-semibold tracking-[-0.03em] mb-1 ${isDark ? 'text-snow' : 'text-ink'}`}>
@@ -30,7 +30,7 @@ function ProjectChapter({ project }) {
               {project.techStack.map((t) => (
                 <span
                   key={t}
-                  className={`text-xs border-b pb-0.5 ${isDark ? 'text-smoke border-coal-line' : 'text-dim border-line'}`}
+                  className={`text-sm border-b pb-0.5 ${isDark ? 'text-smoke border-coal-line' : 'text-dim border-line'}`}
                 >
                   {t}
                 </span>
@@ -64,7 +64,7 @@ function ProjectChapter({ project }) {
 
           {/* Right: content */}
           <div>
-            <p className={`text-[17px] leading-[1.75] mb-10 ${isDark ? 'text-snow' : 'text-ink'}`}>
+            <p className={`text-lg leading-[1.75] mb-10 ${isDark ? 'text-snow' : 'text-ink'}`}>
               {project.description}
             </p>
 
@@ -72,12 +72,12 @@ function ProjectChapter({ project }) {
             {project.role && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
                 <div>
-                  <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                     역할
                   </p>
                   <ul className="space-y-2">
                     {project.role.map((r) => (
-                      <li key={r} className={`text-[15px] leading-6 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                      <li key={r} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
                         — {r}
                       </li>
                     ))}
@@ -86,10 +86,10 @@ function ProjectChapter({ project }) {
 
                 {project.designPoint && (
                   <div>
-                    <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                    <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                       설계 포인트
                     </p>
-                    <p className={`text-[15px] leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                    <p className={`text-base leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                       {project.designPoint}
                     </p>
                   </div>
@@ -100,7 +100,7 @@ function ProjectChapter({ project }) {
             {/* Troubleshooting (SecondHandBooks only) */}
             {project.troubleshooting && (
               <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-[11px] uppercase tracking-[0.24em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-xs uppercase tracking-[0.2em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   트러블슈팅
                 </p>
                 <div className="space-y-6">
@@ -112,13 +112,13 @@ function ProjectChapter({ project }) {
                       <p className={`text-sm font-semibold mb-2 ${isDark ? 'text-snow' : 'text-ink'}`}>
                         {ts.titleEn || ts.problem}
                       </p>
-                      <p className={`text-xs leading-5 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                      <p className={`text-sm leading-6 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                         <span className="text-red-500 mr-1">●</span>{ts.cause}
                       </p>
-                      <p className={`text-xs leading-5 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                      <p className={`text-sm leading-6 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                         <span className="text-blue-500 mr-1">●</span>{ts.solution}
                       </p>
-                      <p className={`text-xs leading-5 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                      <p className={`text-sm leading-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                         <span className="mr-1" style={{ color: isDark ? '#5A5650' : '#B8B0A6' }}>●</span>{ts.result}
                       </p>
                     </div>
@@ -130,12 +130,12 @@ function ProjectChapter({ project }) {
             {/* Outcomes (SecondHandBooks only) */}
             {project.outcomes && (
               <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   성과
                 </p>
                 <ul className="space-y-2">
                   {project.outcomes.map((o) => (
-                    <li key={o} className={`text-[15px] leading-6 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                    <li key={o} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
                       — {o}
                     </li>
                   ))}
@@ -146,10 +146,10 @@ function ProjectChapter({ project }) {
             {/* Improvements (SecondHandBooks only) */}
             {project.improvements && (
               <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   개선 방향
                 </p>
-                <p className={`text-[15px] leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-base leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   {project.improvements.join(' · ')}
                 </p>
               </div>

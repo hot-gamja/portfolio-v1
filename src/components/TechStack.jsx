@@ -42,7 +42,7 @@ export default function TechStack() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
 
         <div ref={ref} className="fade-in">
-          <p className="text-[11px] font-semibold tracking-[0.28em] text-dim uppercase mb-3">
+          <p className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-3">
             Skills
           </p>
           <h2 className="text-4xl sm:text-5xl font-semibold text-ink tracking-[-0.03em] mb-16">
@@ -53,14 +53,14 @@ export default function TechStack() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
             {mainStacks.map((group) => (
               <div key={group.category}>
-                <h3 className="text-[11px] font-semibold tracking-[0.24em] text-dim uppercase mb-6">
+                <h3 className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-6">
                   {group.category}
                 </h3>
                 <ul className="space-y-5">
                   {group.items.map((item) => (
                     <li key={item.name}>
                       <p className="text-sm font-semibold text-ink">{item.name}</p>
-                      <p className="text-xs text-dim mt-0.5 leading-relaxed">{item.desc}</p>
+                      <p className="text-sm text-dim mt-0.5 leading-relaxed">{item.desc}</p>
                     </li>
                   ))}
                 </ul>
@@ -70,14 +70,14 @@ export default function TechStack() {
 
           {/* Frontend: smaller, separated */}
           <div className="border-t border-line pt-8">
-            <h3 className="text-[11px] font-semibold tracking-[0.24em] text-dim uppercase mb-5 opacity-50">
+            <h3 className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-5 opacity-50">
               Frontend
             </h3>
             <div className="flex flex-wrap gap-x-10 gap-y-3">
               {frontendStack.map((item) => (
                 <div key={item.name} className="flex items-baseline gap-2">
-                  <p className="text-xs font-semibold text-dim">{item.name}</p>
-                  <p className="text-xs text-dim opacity-60">{item.desc}</p>
+                  <p className="text-sm font-semibold text-dim">{item.name}</p>
+                  <p className="text-sm text-dim opacity-60">{item.desc}</p>
                 </div>
               ))}
             </div>

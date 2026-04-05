@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Links */}
           <div className="flex flex-wrap gap-8 text-sm">
             <a
-              href="https://github.com/[username]"
+              href="https://github.com/hot-gamja"
               target="_blank"
               rel="noreferrer"
               className="text-dim border-b border-dim pb-0.5 hover:opacity-60 transition-opacity"
@@ -21,18 +21,10 @@ export default function Footer() {
               GitHub
             </a>
             <a
-              href="mailto:[your@email.com]"
+              href="mailto:abcd0701@naver.com"
               className="text-dim border-b border-dim pb-0.5 hover:opacity-60 transition-opacity"
             >
               Email
-            </a>
-            <a
-              href="/portfolio-v1/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="text-dim border-b border-dim pb-0.5 hover:opacity-60 transition-opacity"
-            >
-              Resume PDF
             </a>
           </div>
         </div>
