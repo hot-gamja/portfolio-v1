@@ -68,7 +68,7 @@ export const projects = [
         result: '업로드 응답 시간 단축',
       },
     ],
-    github: 'https://github.com/[username]/[repo]',ㅈ
+    github: 'https://github.com/[username]/[repo]',
     demo: '',
   },
 ]
