@@ -7,7 +7,7 @@ export default function Hero() {
 
           {/* Left: main content */}
           <div>
-            <p className="text-[11px] font-semibold tracking-[0.28em] text-dim uppercase mb-6">
+            <p className="text-xs font-semibold tracking-[0.28em] text-dim uppercase mb-6">
               Backend Developer
             </p>
 
@@ -46,16 +46,16 @@ export default function Hero() {
           <div className="hidden lg:block">
             <div className="border-l border-line pl-8 space-y-8">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.24em] text-dim mb-3">Core Stack</p>
-                <p className="text-[15px] leading-7 text-ink">
+                <p className="text-xs uppercase tracking-[0.24em] text-dim mb-3">Core Stack</p>
+                <p className="text-base leading-7 text-ink">
                   Spring Boot / PostgreSQL
                   <br />
                   MyBatis / AWS
                 </p>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.24em] text-dim mb-3">Focus</p>
-                <p className="text-[15px] leading-7 text-ink">
+                <p className="text-xs uppercase tracking-[0.24em] text-dim mb-3">Focus</p>
+                <p className="text-base leading-7 text-ink">
                   Structure / Correctness
                   <br />
                   Operations
@@ -70,10 +70,10 @@ export default function Hero() {
       {/* Bottom bar */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-line py-4">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
-          <p className="text-[11px] text-dim tracking-wide">
+          <p className="text-xs text-dim tracking-wide">
             이 포트폴리오를 React + Tailwind CSS로 직접 구현했습니다
           </p>
-          <p className="text-[11px] font-semibold tracking-[0.24em] text-dim uppercase">
+          <p className="text-xs font-semibold tracking-[0.24em] text-dim uppercase">
             Selected Work ↓
           </p>
         </div>

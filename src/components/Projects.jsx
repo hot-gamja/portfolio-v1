@@ -21,7 +21,7 @@ function ProjectChapter({ project }) {
             <p className={`text-sm mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
               {project.subtitle}
             </p>
-            <p className={`text-xs mb-8 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+            <p className={`text-sm mb-8 ${isDark ? 'text-smoke' : 'text-dim'}`}>
               {project.duration} · {project.teamSize}
             </p>
 
@@ -72,10 +72,10 @@ function ProjectChapter({ project }) {
             {project.role && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
                 <div>
-                  <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                     역할
                   </p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {project.role.map((r) => (
                       <li key={r} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
                         — {r}
@@ -86,7 +86,7 @@ function ProjectChapter({ project }) {
 
                 {project.designPoint && (
                   <div>
-                    <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                    <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                       설계 포인트
                     </p>
                     <p className={`text-base leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
@@ -100,7 +100,7 @@ function ProjectChapter({ project }) {
             {/* Troubleshooting (SecondHandBooks only) */}
             {project.troubleshooting && (
               <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs uppercase tracking-[0.2em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   트러블슈팅
                 </p>
                 <div className="space-y-6">
@@ -109,7 +109,7 @@ function ProjectChapter({ project }) {
                       key={i}
                       className={`border-l-2 pl-5 ${isDark ? 'border-coal-line' : 'border-line'}`}
                     >
-                      <p className={`text-sm font-semibold mb-2 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                      <p className={`text-base font-semibold mb-3 ${isDark ? 'text-snow' : 'text-ink'}`}>
                         {ts.titleEn || ts.problem}
                       </p>
                       <p className={`text-sm leading-6 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
@@ -130,10 +130,10 @@ function ProjectChapter({ project }) {
             {/* Outcomes (SecondHandBooks only) */}
             {project.outcomes && (
               <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   성과
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {project.outcomes.map((o) => (
                     <li key={o} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
                       — {o}
@@ -146,7 +146,7 @@ function ProjectChapter({ project }) {
             {/* Improvements (SecondHandBooks only) */}
             {project.improvements && (
               <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   개선 방향
                 </p>
                 <p className={`text-base leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
@@ -171,7 +171,7 @@ export default function Projects() {
       <section className="border-t border-line">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 lg:pt-32 pb-12">
           <div ref={ref} className="fade-in">
-            <p className="text-[11px] font-semibold tracking-[0.28em] text-dim uppercase mb-3">
+            <p className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-3">
               Work
             </p>
             <h2 className="text-4xl sm:text-5xl font-semibold text-ink tracking-[-0.03em]">
