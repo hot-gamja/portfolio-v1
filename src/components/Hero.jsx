@@ -26,23 +26,15 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-8 text-sm font-medium">
               <a
-                href="https://github.com/[username]"
+                href="https://github.com/hot-gamja"
                 target="_blank"
                 rel="noreferrer"
                 className="border-b border-ink text-ink pb-0.5 hover:opacity-50 transition-opacity"
               >
                 GitHub
               </a>
-              <a
-                href="/portfolio-v1/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="border-b border-ink text-ink pb-0.5 hover:opacity-50 transition-opacity"
-              >
-                Resume
-              </a>
-              <a
-                href="mailto:[your@email.com]"
+<a
+                href="mailto:abcd0701@naver.com"
                 className="border-b border-ink text-ink pb-0.5 hover:opacity-50 transition-opacity"
               >
                 Contact
