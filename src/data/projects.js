@@ -34,6 +34,12 @@ export const projects = [
         result: '동시 요청 시 하나만 통과, 정원 초과 없이 데이터 정합성 보장',
       },
       {
+        titleEn: 'S3 / DB Consistency on Image Update',
+        cause: '이미지 수정 중 예외 발생 시 DB는 롤백되지만 S3 파일은 이미 삭제되어 DB-스토리지 불일치 발생',
+        solution: 'TransactionSynchronizationAdapter afterCommit 적용 — DB 커밋 완료 후에만 S3 삭제 실행',
+        result: '롤백 시 기존 이미지 유지, DB-스토리지 정합성 보장',
+      },
+      {
         titleEn: 'Cache Key Collision — Wish List Cross-User Leak',
         cause: '전 사용자가 동일 캐시 키 공유 — 개인화 데이터(찜 여부)가 섞임',
         solution: '캐시 키에 memberSeq 포함, @CacheEvict를 찜 토글/모임 생성/탈퇴에 연계',
