@@ -70,30 +70,17 @@ function ProjectChapter({ project }) {
 
             {/* Role + Design point (SecondHandBooks only) */}
             {project.role && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-                <div>
-                  <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                    역할
-                  </p>
-                  <ul className="space-y-3">
-                    {project.role.map((r) => (
-                      <li key={r} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
-                        — {r}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {project.designPoint && (
-                  <div>
-                    <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                      설계 포인트
-                    </p>
-                    <p className={`text-base leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                      {project.designPoint}
-                    </p>
-                  </div>
-                )}
+              <div className="mb-10">
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  역할
+                </p>
+                <ul className="space-y-3">
+                  {project.role.map((r) => (
+                    <li key={r} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                      · {r}
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
 
@@ -127,33 +114,6 @@ function ProjectChapter({ project }) {
               </div>
             )}
 
-            {/* Outcomes (SecondHandBooks only) */}
-            {project.outcomes && (
-              <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  성과
-                </p>
-                <ul className="space-y-3">
-                  {project.outcomes.map((o) => (
-                    <li key={o} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
-                      — {o}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Improvements (SecondHandBooks only) */}
-            {project.improvements && (
-              <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  개선 방향
-                </p>
-                <p className={`text-base leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  {project.improvements.join(' · ')}
-                </p>
-              </div>
-            )}
           </div>
 
         </div>

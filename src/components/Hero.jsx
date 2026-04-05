@@ -42,6 +42,7 @@ export default function Hero() {
             </div>
           </div>
 
+
           {/* Right: text index (lg only) */}
           <div className="hidden lg:block">
             <div className="border-l border-line pl-8 space-y-8">

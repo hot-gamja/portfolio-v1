@@ -52,7 +52,7 @@ export default function Summary() {
             <div className="stagger border-t border-line pt-6">
               <p className="text-sm font-semibold text-ink mb-3">배포와 운영 경험</p>
               <p className="text-base leading-7 text-dim">
-                EC2, RDS, Nginx 환경에서 직접 배포하며
+                EC2, RDS, S3, Nginx 환경에서 직접 배포하며
                 설정 차이와 운영 이슈를 해결했습니다.
               </p>
             </div>

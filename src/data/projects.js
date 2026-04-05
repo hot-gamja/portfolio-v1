@@ -7,7 +7,7 @@ export const projects = [
     duration: '2025.11 – 2026.03',
     teamSize: '개인 프로젝트',
     description: 'Spring Boot로 직접 만들어 EC2에 배포해 운영 중인 개인 기술 블로그.',
-    techStack: ['Spring Boot 3.5', 'Thymeleaf', 'MyBatis', 'PostgreSQL', 'Gradle', 'Tailwind CSS', 'Docker', 'AWS EC2'],
+    techStack: ['Spring Boot', 'Thymeleaf', 'MyBatis', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'AWS'],
     github: 'https://github.com/hot-gamja/spring-boot-thymeleaf',
     demo: 'https://hotgamja.dev',
   },
@@ -21,28 +21,11 @@ export const projects = [
     description:
       '사용자 간 중고 도서 거래와 독서모임을 지원하는 플랫폼. 동시성 제어, Spring Cache 개인화, S3 정합성 처리 등 백엔드 핵심 과제를 전담했습니다.',
     role: [
-      '독서모임 CRUD, 가입 승인/거절, 리더 탈퇴 승계 로직 설계 및 구현 전담',
-      '비관적 락(SELECT FOR UPDATE)으로 동시 승인 정원 초과 방지',
-      'Spring Cache 사용자별 캐시 키 분리 (찜 상태 오염 해결)',
-      'S3 afterCommit 삭제로 DB-스토리지 정합성 확보',
-      'CSRF 공통 인프라 구축, XSS 방어, 파일 업로드 서버사이드 보안 검증',
+      '독서모임 기능 전체 설계 및 구현 (CRUD, 가입 승인/거절, 리더 승계)',
+      '동시성 제어 및 캐시 최적화',
+      '보안 공통 모듈 구축 (CSRF, XSS, 파일 업로드 검증)',
     ],
-    techStack: [
-      'Spring MVC 5.3',
-      'MyBatis',
-      'PostgreSQL',
-      'Redis',
-      'AWS S3',
-      'CloudFront',
-      'ALB',
-      'Auto Scaling',
-      'CodeDeploy',
-      'WebSocket/STOMP',
-      'Toss Payments',
-      '카카오/네이버 OAuth',
-    ],
-    designPoint:
-      '비관적 락으로 동시성 제어, 캐시 키에 사용자 식별자를 포함해 개인화 데이터 오염 방지, afterCommit으로 DB-스토리지 정합성 확보.',
+    techStack: ['Spring MVC', 'MyBatis', 'PostgreSQL', 'Redis', 'AWS'],
     troubleshooting: [
       {
         titleEn: 'Race Condition on Book Club Approval',
