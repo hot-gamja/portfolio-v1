@@ -15,14 +15,17 @@ function ProjectChapter({ project }) {
             <p className={`text-7xl lg:text-8xl font-semibold tracking-[-0.05em] leading-none mb-6 ${isDark ? 'text-coal-line' : 'text-line'}`}>
               {project.id}
             </p>
-            <h3 className={`text-2xl lg:text-3xl font-semibold tracking-[-0.03em] mb-2 ${isDark ? 'text-snow' : 'text-ink'}`}>
+            <h3 className={`text-2xl lg:text-3xl font-semibold tracking-[-0.03em] mb-1 ${isDark ? 'text-snow' : 'text-ink'}`}>
               {project.title}
             </h3>
-            <p className={`text-sm mb-8 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+            <p className={`text-sm mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
               {project.subtitle}
             </p>
+            <p className={`text-xs mb-8 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+              {project.duration} · {project.teamSize}
+            </p>
 
-            {/* Tech stack as inline list */}
+            {/* Tech stack */}
             <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8">
               {project.techStack.map((t) => (
                 <span
@@ -65,59 +68,92 @@ function ProjectChapter({ project }) {
               {project.description}
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-              {/* Role */}
-              <div>
+            {/* Role + Design point (SecondHandBooks only) */}
+            {project.role && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+                <div>
+                  <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                    역할
+                  </p>
+                  <ul className="space-y-2">
+                    {project.role.map((r) => (
+                      <li key={r} className={`text-[15px] leading-6 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                        — {r}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {project.designPoint && (
+                  <div>
+                    <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                      설계 포인트
+                    </p>
+                    <p className={`text-[15px] leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                      {project.designPoint}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Troubleshooting (SecondHandBooks only) */}
+            {project.troubleshooting && (
+              <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
+                <p className={`text-[11px] uppercase tracking-[0.24em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  트러블슈팅
+                </p>
+                <div className="space-y-6">
+                  {project.troubleshooting.map((ts, i) => (
+                    <div
+                      key={i}
+                      className={`border-l-2 pl-5 ${isDark ? 'border-coal-line' : 'border-line'}`}
+                    >
+                      <p className={`text-sm font-semibold mb-2 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                        {ts.titleEn || ts.problem}
+                      </p>
+                      <p className={`text-xs leading-5 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                        <span className="text-red-500 mr-1">●</span>{ts.cause}
+                      </p>
+                      <p className={`text-xs leading-5 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                        <span className="text-blue-500 mr-1">●</span>{ts.solution}
+                      </p>
+                      <p className={`text-xs leading-5 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                        <span className="mr-1" style={{ color: isDark ? '#5A5650' : '#B8B0A6' }}>●</span>{ts.result}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Outcomes (SecondHandBooks only) */}
+            {project.outcomes && (
+              <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
                 <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  역할
+                  성과
                 </p>
                 <ul className="space-y-2">
-                  {project.role.map((r) => (
-                    <li key={r} className={`text-[15px] leading-6 ${isDark ? 'text-snow' : 'text-ink'}`}>
-                      — {r}
+                  {project.outcomes.map((o) => (
+                    <li key={o} className={`text-[15px] leading-6 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                      — {o}
                     </li>
                   ))}
                 </ul>
               </div>
+            )}
 
-              {/* Design point */}
-              <div>
+            {/* Improvements (SecondHandBooks only) */}
+            {project.improvements && (
+              <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
                 <p className={`text-[11px] uppercase tracking-[0.24em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  설계 포인트
+                  개선 방향
                 </p>
                 <p className={`text-[15px] leading-7 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  {project.designPoint}
+                  {project.improvements.join(' · ')}
                 </p>
               </div>
-            </div>
-
-            {/* Troubleshooting */}
-            <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-              <p className={`text-[11px] uppercase tracking-[0.24em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                트러블슈팅
-              </p>
-              <div className="space-y-6">
-                {project.troubleshooting.map((ts, i) => (
-                  <div
-                    key={i}
-                    className={`border-l-2 pl-5 ${isDark ? 'border-coal-line' : 'border-line'}`}
-                  >
-                    <p className={`text-sm font-semibold mb-2 ${isDark ? 'text-snow' : 'text-ink'}`}>
-                      {ts.titleEn || ts.problem}
-                    </p>
-                    <p className={`text-xs leading-5 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                      <span className="text-red-500 mr-1">●</span>{ts.cause}
-                    </p>
-                    <p className={`text-xs leading-5 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                      <span className="text-blue-500 mr-1">●</span>{ts.solution}
-                    </p>
-                    <p className={`text-xs leading-5 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                      <span className="mr-1" style={{ color: isDark ? '#5A5650' : '#B8B0A6' }}>●</span>{ts.result}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            )}
           </div>
 
         </div>
