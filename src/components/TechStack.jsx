@@ -10,6 +10,8 @@ const mainStacks = [
       { name: 'MyBatis', desc: 'SQL 직접 작성, 데이터 흐름 제어' },
       { name: 'Thymeleaf / JSP', desc: '서버사이드 템플릿 엔진' },
       { name: 'JPA / Hibernate', desc: '엔티티 설계, 연관관계 매핑' },
+      { name: 'Spring Security', desc: 'JWT 인증·인가, 권한 분리 설계' },
+      { name: 'WebSocket', desc: '실시간 데이터 전파' },
     ],
   },
   {
@@ -17,7 +19,7 @@ const mainStacks = [
     items: [
       { name: 'PostgreSQL', desc: '운영 DB, 복잡한 쿼리 작성' },
       { name: 'MySQL / MariaDB', desc: '관계형 DB 설계 및 운영' },
-      { name: 'Redis', desc: '캐시 적용, 조회 성능 개선' },
+      { name: 'Redis', desc: '캐시, Pub/Sub 기반 실시간 이벤트 전파' },
     ],
   },
   {

@@ -25,7 +25,7 @@ export const projects = [
       '동시성 제어 및 캐시 최적화',
       '보안 공통 모듈 구축 (CSRF, XSS, 파일 업로드 검증)',
     ],
-    techStack: ['Spring MVC', 'MyBatis', 'PostgreSQL', 'Redis', 'AWS'],
+    techStack: ['Spring MVC', 'MyBatis', 'PostgreSQL', 'Redis', 'Spring Security', 'AWS S3'],
     troubleshooting: [
       {
         titleEn: 'Race Condition on Book Club Approval',
