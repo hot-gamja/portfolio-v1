@@ -64,9 +64,14 @@ function ProjectChapter({ project }) {
 
           {/* Right: content */}
           <div>
-            <p className={`text-lg leading-[1.75] mb-10 ${isDark ? 'text-snow' : 'text-ink'}`}>
-              {project.description}
-            </p>
+            <div className="mb-10">
+              <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                서비스 소개
+              </p>
+              <p className={`text-lg leading-[1.75] ${isDark ? 'text-snow' : 'text-ink'}`}>
+                {project.description}
+              </p>
+            </div>
 
             {/* Role + Design point (SecondHandBooks only) */}
             {project.role && (
