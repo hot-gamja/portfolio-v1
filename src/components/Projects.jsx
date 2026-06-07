@@ -44,7 +44,7 @@ function ProjectChapter({ project }) {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className={`border-b pb-0.5 hover:opacity-50 transition-opacity ${isDark ? 'text-snow border-snow' : 'text-ink border-ink'}`}
+                  className={`pb-0.5 border-b border-transparent hover:border-current transition-colors ${isDark ? 'text-snow' : 'text-ink'}`}
                 >
                   GitHub
                 </a>
@@ -54,7 +54,7 @@ function ProjectChapter({ project }) {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className={`border-b pb-0.5 hover:opacity-50 transition-opacity ${isDark ? 'text-smoke border-smoke' : 'text-dim border-dim'}`}
+                  className={`pb-0.5 border-b border-transparent hover:border-current transition-colors ${isDark ? 'text-smoke' : 'text-dim'}`}
                 >
                   {project.demo.replace('https://', '')}
                 </a>
