@@ -89,36 +89,6 @@ function ProjectChapter({ project }) {
               </div>
             )}
 
-            {/* Troubleshooting (SecondHandBooks only) */}
-            {project.troubleshooting && (
-              <div className={`border-t pt-8 mb-10 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  트러블슈팅
-                </p>
-                <div className="space-y-6">
-                  {project.troubleshooting.map((ts, i) => (
-                    <div
-                      key={i}
-                      className={`border-l-2 pl-5 ${isDark ? 'border-coal-line' : 'border-line'}`}
-                    >
-                      <p className={`text-base font-semibold mb-3 ${isDark ? 'text-snow' : 'text-ink'}`}>
-                        {ts.titleEn || ts.problem}
-                      </p>
-                      <p className={`text-sm leading-6 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                        <span className="text-red-500 mr-2">●</span><span className={`font-medium mr-2 ${isDark ? 'text-snow' : 'text-ink'}`}>원인</span>{ts.cause}
-                      </p>
-                      <p className={`text-sm leading-6 mb-1 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                        <span className="text-blue-500 mr-2">●</span><span className={`font-medium mr-2 ${isDark ? 'text-snow' : 'text-ink'}`}>해결</span>{ts.solution}
-                      </p>
-                      <p className={`text-sm leading-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                        <span className="mr-2" style={{ color: isDark ? '#5A5650' : '#B8B0A6' }}>●</span><span className={`font-medium mr-2 ${isDark ? 'text-snow' : 'text-ink'}`}>결과</span>{ts.result}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
           </div>
 
         </div>
