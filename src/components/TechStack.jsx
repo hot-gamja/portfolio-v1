@@ -1,16 +1,20 @@
 import { useFadeIn } from '../hooks/useFadeIn'
 
-const mainStacks = [
+const stacks = [
+  {
+    category: 'Language',
+    items: [
+      { name: 'Java', desc: '백엔드 주 개발 언어' },
+    ],
+  },
   {
     category: 'Backend',
     items: [
-      { name: 'Java', desc: '백엔드 주 개발 언어' },
       { name: 'Spring Boot', desc: 'REST API 설계, 계층 구조, 의존성 주입' },
       { name: 'Spring MVC', desc: '레거시 기반 웹 애플리케이션 개발' },
-      { name: 'MyBatis', desc: 'SQL 직접 작성, 데이터 흐름 제어' },
-      { name: 'Thymeleaf / JSP', desc: '서버사이드 템플릿 엔진' },
-      { name: 'JPA / Hibernate', desc: '엔티티 설계, 연관관계 매핑' },
       { name: 'Spring Security', desc: 'JWT 인증·인가, 권한 분리 설계' },
+      { name: 'JPA / MyBatis', desc: '엔티티 설계, SQL 직접 작성' },
+      { name: 'Thymeleaf / JSP', desc: '서버사이드 템플릿 엔진' },
       { name: 'WebSocket', desc: '실시간 데이터 전파' },
     ],
   },
@@ -32,12 +36,14 @@ const mainStacks = [
       { name: 'Nginx', desc: '리버스 프록시, 정적 파일 서빙' },
     ],
   },
-]
-
-const frontendStack = [
-  { name: 'React', desc: 'SPA 구성, 컴포넌트 기반 UI' },
-  { name: 'JavaScript', desc: '주 언어, 비동기 처리' },
-  { name: 'Tailwind CSS', desc: '유틸리티 기반 스타일링' },
+  {
+    category: 'Frontend',
+    items: [
+      { name: 'React', desc: 'SPA 구성, 컴포넌트 기반 UI' },
+      { name: 'JavaScript', desc: '주 언어, 비동기 처리' },
+      { name: 'Tailwind CSS', desc: '유틸리티 기반 스타일링' },
+    ],
+  },
 ]
 
 export default function TechStack() {
@@ -55,9 +61,8 @@ export default function TechStack() {
             Tech Stack
           </h2>
 
-          {/* Main: Backend / Database / Infrastructure */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
-            {mainStacks.map((group) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+            {stacks.map((group) => (
               <div key={group.category}>
                 <h3 className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-6">
                   {group.category}
@@ -72,21 +77,6 @@ export default function TechStack() {
                 </ul>
               </div>
             ))}
-          </div>
-
-          {/* Frontend: smaller, separated */}
-          <div className="border-t border-line pt-8">
-            <h3 className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-5 opacity-50">
-              Frontend
-            </h3>
-            <div className="flex flex-wrap gap-x-10 gap-y-3">
-              {frontendStack.map((item) => (
-                <div key={item.name} className="flex items-baseline gap-2">
-                  <p className="text-sm font-semibold text-dim">{item.name}</p>
-                  <p className="text-sm text-dim opacity-60">{item.desc}</p>
-                </div>
-              ))}
-            </div>
           </div>
 
         </div>
