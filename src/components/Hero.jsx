@@ -20,22 +20,18 @@ export default function Hero() {
               <br />
               문제를 해결하는 백엔드 개발자
             </p>
-            <p className="text-sm text-dim mb-12">
-              Spring Boot · PostgreSQL · MyBatis · AWS
-            </p>
-
-            <div className="flex flex-wrap gap-8 text-sm font-medium">
+            <div className="flex flex-wrap gap-8 text-sm font-medium mt-12">
               <a
                 href="https://github.com/hot-gamja"
                 target="_blank"
                 rel="noreferrer"
-                className="border-b border-ink text-ink pb-0.5 hover:opacity-50 transition-opacity"
+                className="text-ink pb-0.5 hover:border-b hover:border-ink transition-all"
               >
                 GitHub
               </a>
-<a
+              <a
                 href="mailto:abcd0701@naver.com"
-                className="border-b border-ink text-ink pb-0.5 hover:opacity-50 transition-opacity"
+                className="text-ink pb-0.5 hover:border-b hover:border-ink transition-all"
               >
                 Contact
               </a>
