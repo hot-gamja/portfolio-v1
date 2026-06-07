@@ -56,7 +56,7 @@ function ProjectChapter({ project }) {
                   rel="noreferrer"
                   className={`border-b pb-0.5 hover:opacity-50 transition-opacity ${isDark ? 'text-smoke border-smoke' : 'text-dim border-dim'}`}
                 >
-                  Demo
+                  {project.demo.replace('https://', '')}
                 </a>
               )}
             </div>
