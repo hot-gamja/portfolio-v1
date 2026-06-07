@@ -67,10 +67,7 @@ export default function Hero() {
       {/* Bottom bar */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-line py-4">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
-          <p className="text-xs text-dim tracking-wide">
-            이 포트폴리오를 React + Tailwind CSS로 직접 구현했습니다
-          </p>
-          <p className="text-xs font-semibold tracking-[0.24em] text-dim uppercase">
+<p className="text-xs font-semibold tracking-[0.24em] text-dim uppercase">
             Selected Work ↓
           </p>
         </div>
