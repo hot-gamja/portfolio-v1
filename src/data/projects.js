@@ -26,7 +26,7 @@ export const projects = [
       '캐시 개인화 버그 수정 — 전체 공유 캐시 키로 인한 찜 목록 데이터 누수를 사용자별 키 분리로 제거, @CacheEvict 무효화 연계',
       'Spring Security 도입 — CSRF·XSS·파일 업로드 공통 보안 처리, 팀 기능 코드 수정 없이 일괄 적용',
     ],
-    techStack: ['Spring MVC', 'MyBatis', 'PostgreSQL', 'Redis', 'Spring Security', 'AWS S3'],
+    techStack: ['Spring MVC', 'JSP', 'MyBatis', 'PostgreSQL', 'Redis', 'Spring Security', 'AWS S3'],
     outcomes: [
       'Load Test: 동시 30명 30분 — p95 59.7ms, 에러율 0%',
       'Stress Test: 동시 500명 — p95 1.85초, 에러율 0%, 458,004건 처리',
@@ -50,7 +50,7 @@ export const projects = [
       '금융 정산 정확성 확보 — float→BigDecimal 전환, Math.multiplyExact 오버플로우 방어, 체결가 차액 환급 누락 발견·수정, N+1 개선',
       'JWT 인증 구조 전담 설계 — 회원·관리자 권한 분리, Redis Pub/Sub + WebSocket으로 호가창·체결내역 실시간 전파 구현',
     ],
-    techStack: ['Spring Boot', 'Spring Security', 'JPA', 'JWT', 'PostgreSQL', 'Redis', 'WebSocket'],
+    techStack: ['Spring Boot', 'Spring Security', 'JPA', 'JWT', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
     github: 'https://github.com/SHSWAcademy/STO',
   },
 ]
