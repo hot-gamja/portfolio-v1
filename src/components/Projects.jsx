@@ -88,21 +88,6 @@ function ProjectChapter({ project }) {
               </div>
             )}
 
-            {project.outcomes && (
-              <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                  성과
-                </p>
-                <ul className="space-y-2">
-                  {project.outcomes.map((o) => (
-                    <li key={o} className={`text-sm leading-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
-                      · {o}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
           </div>
 
         </div>

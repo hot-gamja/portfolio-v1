@@ -27,12 +27,6 @@ export const projects = [
       'Spring Security 도입 — CSRF·XSS·파일 업로드 공통 보안 처리, 팀 기능 코드 수정 없이 일괄 적용',
     ],
     techStack: ['Spring MVC', 'JSP', 'MyBatis', 'PostgreSQL', 'Redis', 'Spring Security', 'AWS S3'],
-    outcomes: [
-      'Load Test: 동시 30명 30분 — p95 59.7ms, 에러율 0%',
-      'Stress Test: 동시 500명 — p95 1.85초, 에러율 0%, 458,004건 처리',
-      'Auto Scaling 실제 동작 확인 (EC2 1대 → 2대 자동 스케일 아웃)',
-    ],
-    improvements: ['실시간 알림 기능', '포인트/적립금 시스템', '리뷰/평점 시스템'],
     github: 'https://github.com/SHSWAcademy/SecondHandBooks',
   },
   {
