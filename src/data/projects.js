@@ -8,7 +8,7 @@ export const projects = [
     teamSize: '개인 프로젝트',
     description: 'Spring Boot로 직접 만들어 EC2에 배포해 운영 중인 개인 기술 블로그.',
     techStack: ['Spring Boot', 'Thymeleaf', 'MyBatis', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'AWS'],
-    github: 'https://github.com/hot-gamja/spring-boot-thymeleaf',
+    github: 'https://github.com/hot-gamja/blog',
     demo: 'https://hotgamja.dev',
   },
   {
