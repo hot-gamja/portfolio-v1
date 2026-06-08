@@ -4,9 +4,6 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto w-full px-6 sm:px-10 lg:px-16 py-32">
 
         <div>
-
-          {/* Left: main content */}
-          <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-dim uppercase mb-6">
               Backend Developer
             </p>
@@ -36,10 +33,6 @@ export default function Hero() {
                 Contact
               </a>
             </div>
-          </div>
-
-
-
         </div>
       </div>
 

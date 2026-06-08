@@ -48,19 +48,3 @@ export const projects = [
     github: 'https://github.com/SHSWAcademy/STO',
   },
 ]
-
-export const architectureProject = {
-  title: 'SecondHandBooks',
-  systemBullets: [
-    'ALB → EC2 (Auto Scaling)',
-    'Spring MVC + MyBatis',
-    'PostgreSQL (RDS) · Redis (ElastiCache)',
-  ],
-  erdBullets: [
-    'Member · BookClub · BookClubMember · Trade · Book',
-    '독서모임 가입/승인 상태 관리',
-    '외래키 기반 정합성 관리',
-  ],
-  architecture: '/portfolio-v1/images/architecture.png',
-  erd: '/portfolio-v1/images/erd.png',
-}
