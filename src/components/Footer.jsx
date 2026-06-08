@@ -16,13 +16,13 @@ export default function Footer() {
               href="https://github.com/hot-gamja"
               target="_blank"
               rel="noreferrer"
-              className="text-dim border-b border-dim pb-0.5 hover:opacity-60 transition-opacity"
+              className="text-dim pb-0.5 border-b border-transparent hover:border-dim transition-colors"
             >
               GitHub
             </a>
             <a
               href="mailto:abcd0701@naver.com"
-              className="text-dim border-b border-dim pb-0.5 hover:opacity-60 transition-opacity"
+              className="text-dim pb-0.5 border-b border-transparent hover:border-dim transition-colors"
             >
               Email
             </a>
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-dim mt-10 opacity-50">
-          © 2025 이동희. Built with React + Tailwind CSS.
+          © 2026 이동희. Built with React + Tailwind CSS.
         </p>
       </div>
     </footer>

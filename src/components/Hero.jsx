@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="min-h-screen flex flex-col justify-center relative">
       <div className="max-w-6xl mx-auto w-full px-6 sm:px-10 lg:px-16 py-32">
 
-        <div className="lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-20">
+        <div>
 
           {/* Left: main content */}
           <div>
