@@ -15,7 +15,7 @@ const stacks = [
       { name: 'Spring Security', desc: 'JWT 인증·인가, 권한 분리 설계' },
       { name: 'JPA / MyBatis', desc: '엔티티 설계, SQL 직접 작성' },
       { name: 'Thymeleaf / JSP', desc: '서버사이드 템플릿 엔진' },
-      { name: 'WebSocket', desc: '실시간 데이터 전파' },
+      { name: 'WebSocket', desc: '서버 → 클라이언트 실시간 Push (SockJS/STOMP)' },
     ],
   },
   {
