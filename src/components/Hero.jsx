@@ -39,27 +39,6 @@ export default function Hero() {
           </div>
 
 
-          {/* Right: text index (lg only) */}
-          <div className="hidden lg:block">
-            <div className="border-l border-line pl-8 space-y-8">
-              <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-dim mb-3">Core Stack</p>
-                <p className="text-base leading-7 text-ink">
-                  Spring Boot / PostgreSQL
-                  <br />
-                  MyBatis / AWS
-                </p>
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-[0.24em] text-dim mb-3">Focus</p>
-                <p className="text-base leading-7 text-ink">
-                  Structure / Correctness
-                  <br />
-                  Operations
-                </p>
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>

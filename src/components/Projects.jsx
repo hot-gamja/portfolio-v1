@@ -73,7 +73,6 @@ function ProjectChapter({ project }) {
               </p>
             </div>
 
-            {/* Role + Design point (SecondHandBooks only) */}
             {project.role && (
               <div className="mb-10">
                 <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
@@ -83,6 +82,21 @@ function ProjectChapter({ project }) {
                   {project.role.map((r) => (
                     <li key={r} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
                       · {r}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {project.outcomes && (
+              <div className={`border-t pt-8 ${isDark ? 'border-coal-line' : 'border-line'}`}>
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  성과
+                </p>
+                <ul className="space-y-2">
+                  {project.outcomes.map((o) => (
+                    <li key={o} className={`text-sm leading-6 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                      · {o}
                     </li>
                   ))}
                 </ul>

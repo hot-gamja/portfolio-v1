@@ -50,7 +50,7 @@ export const projects = [
       '금융 정산 정확성 확보 — float→BigDecimal 전환, Math.multiplyExact 오버플로우 방어, 체결가 차액 환급 누락 발견·수정, N+1 개선',
       'JWT 인증 구조 전담 설계 — 회원·관리자 권한 분리, Redis Pub/Sub + WebSocket으로 호가창·체결내역 실시간 전파 구현',
     ],
-    techStack: ['Spring Boot', 'Spring Security', 'JPA', 'JWT', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
+    techStack: ['Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
     github: 'https://github.com/SHSWAcademy/STO',
   },
 ]
