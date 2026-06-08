@@ -54,7 +54,7 @@ function ProjectChapter({ project }) {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className={`pb-0.5 border-b border-transparent hover:border-current transition-colors ${isDark ? 'text-smoke' : 'text-dim'}`}
+                  className={`pb-0.5 border-b border-transparent hover:border-current transition-colors ${isDark ? 'text-snow' : 'text-ink'}`}
                 >
                   {project.demo.replace('https://', '')}
                 </a>
