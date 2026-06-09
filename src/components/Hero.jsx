@@ -22,13 +22,13 @@ export default function Hero() {
                 href="https://github.com/hot-gamja"
                 target="_blank"
                 rel="noreferrer"
-                className="text-ink pb-0.5 hover:border-b hover:border-ink transition-all"
+                className="text-ink pb-0.5 border-b border-transparent hover:border-ink transition-colors"
               >
                 GitHub
               </a>
               <a
                 href="mailto:abcd0701@naver.com"
-                className="text-ink pb-0.5 hover:border-b hover:border-ink transition-all"
+                className="text-ink pb-0.5 border-b border-transparent hover:border-ink transition-colors"
               >
                 Contact
               </a>

@@ -21,10 +21,10 @@ export const projects = [
     description:
       '사용자 간 중고 도서를 직거래하고 독서모임을 개설·운영할 수 있는 커뮤니티 플랫폼. 도서 검색·거래, 모임 가입 승인·거절, 찜 목록 등 핵심 기능을 제공합니다.',
     role: [
-      '독서모임 도메인 전담 — CRUD부터 가입 승인·거절, 리더 승계까지 전체 흐름 직접 설계·구현',
-      '동시성·정합성 처리 — 동시 승인 Race Condition을 SELECT FOR UPDATE로 구조적 차단, 이미지 수정 시 S3·DB 불일치를 afterCommit으로 해소',
-      '캐시 개인화 버그 수정 — 전체 공유 캐시 키로 인한 찜 목록 데이터 누수를 사용자별 키 분리로 제거, @CacheEvict 무효화 연계',
-      'Spring Security 도입 — CSRF·XSS·파일 업로드 공통 보안 처리, 팀 기능 코드 수정 없이 일괄 적용',
+      { title: '독서모임 도메인 전담', detail: 'CRUD부터 가입 승인·거절, 리더 승계까지 전체 흐름 직접 설계·구현' },
+      { title: '동시성·정합성 처리', detail: '동시 승인 Race Condition을 SELECT FOR UPDATE로 구조적 차단, 이미지 수정 시 S3·DB 불일치를 afterCommit으로 해소' },
+      { title: '캐시 개인화 버그 수정', detail: '전체 공유 캐시 키로 인한 찜 목록 데이터 누수를 사용자별 키 분리로 제거, @CacheEvict 무효화 연계' },
+      { title: 'Spring Security 도입', detail: 'CSRF·XSS·파일 업로드 공통 보안 처리, 팀 기능 코드 수정 없이 일괄 적용' },
     ],
     techStack: ['Spring MVC', 'JSP', 'MyBatis', 'PostgreSQL', 'Redis', 'Spring Security', 'AWS S3'],
     github: 'https://github.com/SHSWAcademy/SecondHandBooks',
@@ -39,10 +39,10 @@ export const projects = [
     description:
       '증권형 토큰(STO)을 실시간으로 매수·매도할 수 있는 거래 플랫폼. 지정가 주문이 오더북에 등록되어 가격·시간 우선으로 체결되며, 호가창과 체결내역이 실시간으로 업데이트됩니다.',
     role: [
-      '매칭 엔진 직접 설계 — Main과 분리된 Match 서버 구축, TreeMap 오더북으로 O(log n) 호가 조회 보장, price-time priority 지정가 체결 구현',
-      'Race Condition 구조적 차단 — 주문 생성 중 외부 수정·취소가 끼어드는 문제를 PENDING 2-phase 트랜잭션으로 설계, 잔고 이중 차감은 비관적 락으로 방지, 데드락은 @Retryable로 자동 복구',
-      '금융 정산 정확성 확보 — float→BigDecimal 전환, Math.multiplyExact 오버플로우 방어, 체결가 차액 환급 누락 발견·수정, N+1 개선',
-      'JWT 인증 구조 전담 설계 — 회원·관리자 권한 분리, Redis Pub/Sub + WebSocket으로 호가창·체결내역 실시간 전파 구현',
+      { title: '매칭 엔진 직접 설계', detail: 'Main과 분리된 Match 서버를 구축하고, TreeMap 오더북으로 O(log n) 호가 조회와 price-time priority 지정가 체결 구현' },
+      { title: 'Race Condition 구조적 차단', detail: '주문 생성 중 수정·취소 요청이 끼어드는 문제를 PENDING 2-phase 트랜잭션으로 분리하고, 잔고 이중 차감은 비관적 락으로 방지, 데드락은 @Retryable로 자동 복구' },
+      { title: '금융 정산 정확성 확보', detail: 'float 연산을 BigDecimal로 전환하고, Math.multiplyExact로 오버플로우를 방지했으며, 체결가 차액 환급 누락과 N+1 문제 개선' },
+      { title: '실시간 전파 구조 설계', detail: '회원·관리자 권한을 분리한 JWT 인증 구조를 설계하고, Redis Pub/Sub과 WebSocket으로 호가창·체결내역 실시간 전파 구현' },
     ],
     techStack: ['Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
     github: 'https://github.com/SHSWAcademy/STO',

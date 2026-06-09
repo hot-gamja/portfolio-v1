@@ -78,10 +78,15 @@ function ProjectChapter({ project }) {
                 <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   역할
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-6">
                   {project.role.map((r) => (
-                    <li key={r} className={`text-base leading-7 ${isDark ? 'text-snow' : 'text-ink'}`}>
-                      · {r}
+                    <li key={r.title}>
+                      <p className={`text-base font-semibold mb-1.5 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                        {r.title}
+                      </p>
+                      <p className={`text-sm leading-relaxed ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                        {r.detail}
+                      </p>
                     </li>
                   ))}
                 </ul>
