@@ -1,7 +1,7 @@
 import { useFadeIn } from '../hooks/useFadeIn'
-import { projects } from '../data/projects'
+import { projects, type Project } from '../data/projects'
 
-function ProjectChapter({ project }) {
+function ProjectChapter({ project }: { project: Project }) {
   const ref = useFadeIn()
   const isDark = project.dark
 
@@ -107,7 +107,7 @@ export default function Projects() {
   return (
     <div>
       {/* Section header */}
-      <section className="border-t border-line">
+      <section id="projects" className="border-t border-line">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 lg:pt-32 pb-12">
           <div ref={ref} className="fade-in">
             <p className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-3">

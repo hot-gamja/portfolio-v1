@@ -1,4 +1,29 @@
-export const architectureProject = {
+interface Role {
+  title: string
+  detail: string
+}
+
+export interface Project {
+  id: string
+  title: string
+  subtitle: string
+  dark: boolean
+  duration: string
+  teamSize: string
+  description: string
+  techStack: string[]
+  github?: string
+  demo?: string
+  role?: Role[]
+}
+
+export interface ArchitectureData {
+  title: string
+  architecture: string
+  systemBullets: string[]
+}
+
+export const architectureProject: ArchitectureData = {
   title: 'STO — 증권형 토큰 거래 플랫폼',
   architecture: '/sto-architecture.png',
   systemBullets: [
@@ -7,11 +32,9 @@ export const architectureProject = {
     'Redis Pub/Sub으로 체결 이벤트를 WebSocket에 실시간 전파',
     'Off-chain 체결 내역을 Sepolia Testnet에 On-chain으로 기록',
   ],
-  erd: '',
-  erdBullets: [],
 }
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: '01',
     title: 'Blog Platform',
@@ -56,6 +79,7 @@ export const projects = [
       { title: 'Race Condition 구조적 차단', detail: '주문 생성 중 수정·취소 요청이 끼어드는 문제를 PENDING 2-phase 트랜잭션으로 분리하고, 잔고 이중 차감은 비관적 락으로 방지, 데드락은 @Retryable로 자동 복구' },
       { title: '금융 정산 정확성 확보', detail: 'float 연산을 BigDecimal로 전환하고, Math.multiplyExact로 오버플로우를 방지했으며, 체결가 차액 환급 누락과 N+1 문제 개선' },
       { title: '실시간 전파 구조 설계', detail: '회원·관리자 권한을 분리한 JWT 인증 구조를 설계하고, Redis Pub/Sub과 WebSocket으로 호가창·체결내역 실시간 전파 구현' },
+      { title: '실시간 거래 UI 구현', detail: 'React로 호가창·캔들 차트·주문창을 구성하고, useTradingSocket 훅으로 STOMP 메시지를 구독해 화면에 실시간 반영' },
     ],
     techStack: ['Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
     github: 'https://github.com/SHSWAcademy/STO',

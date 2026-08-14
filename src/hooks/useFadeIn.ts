@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 export function useFadeIn(threshold = 0.12) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const el = ref.current

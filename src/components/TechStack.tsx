@@ -50,7 +50,7 @@ export default function TechStack() {
   const ref = useFadeIn()
 
   return (
-    <section className="border-t border-line py-24 lg:py-32 bg-surface">
+    <section id="skills" className="border-t border-line py-24 lg:py-32 bg-surface">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
 
         <div ref={ref} className="fade-in">

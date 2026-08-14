@@ -5,7 +5,7 @@ export default function Hero() {
 
         <div>
             <p className="text-xs font-semibold tracking-[0.28em] text-dim uppercase mb-6">
-              Backend Developer
+              Full Stack Developer
             </p>
 
             <h1 className="text-[clamp(4rem,11vw,7.5rem)] font-semibold text-ink tracking-[-0.04em] leading-[0.93] mb-10">
@@ -13,9 +13,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-ink max-w-lg leading-[1.4] tracking-[-0.02em] mb-4">
-              데이터 정합성과 운영 관점에서
+              백엔드 중심으로 설계하고
               <br />
-              문제를 해결하는 백엔드 개발자
+              프론트까지 구현하는 풀스택 개발자
             </p>
             <div className="flex flex-wrap gap-8 text-sm font-medium mt-12">
               <a
