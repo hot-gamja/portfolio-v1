@@ -1,23 +1,11 @@
 import { useFadeIn } from '../hooks/useFadeIn'
-
-const awards = [
-  {
-    year: '2026.04',
-    title: '프로젝트부문 우수상',
-    org: '대한상공회의소 · 신한DS 금융SW 아카데미 6기',
-  },
-  {
-    year: '2024.11',
-    title: 'IP기반 캡스톤디자인 장려상',
-    org: '안양대학교 IP기반융합인재양성단',
-  },
-]
+import { awards, patent } from '../data/awards'
 
 export default function Awards() {
   const ref = useFadeIn()
 
   return (
-    <section className="border-t border-line py-24 lg:py-32">
+    <section id="awards" className="border-t border-line py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <div ref={ref} className="fade-in">
           <p className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-3">
@@ -44,10 +32,8 @@ export default function Awards() {
             <div className="border-t border-line py-8 grid grid-cols-[5rem_1fr] gap-8 lg:gap-16">
               <span className="text-sm text-dim pt-0.5">특허</span>
               <div>
-                <p className="text-base font-semibold text-ink">
-                  부동산 청약 서비스 자격 판단·배점 산출·공고 추천 흐름
-                </p>
-                <p className="text-sm text-dim mt-1">1건 출원</p>
+                <p className="text-base font-semibold text-ink">{patent.title}</p>
+                <p className="text-sm text-dim mt-1">{patent.count}</p>
               </div>
             </div>
             <div className="border-t border-line" />

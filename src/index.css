@@ -42,3 +42,7 @@ body {
 .fade-in.visible .stagger:nth-child(2) { transition-delay: 80ms; }
 .fade-in.visible .stagger:nth-child(3) { transition-delay: 160ms; }
 .fade-in.visible .stagger:nth-child(4) { transition-delay: 240ms; }
+.fade-in.visible .stagger:nth-child(5) { transition-delay: 320ms; }
+.fade-in.visible .stagger:nth-child(6) { transition-delay: 400ms; }
+.fade-in.visible .stagger:nth-child(7) { transition-delay: 480ms; }
+.fade-in.visible .stagger:nth-child(8) { transition-delay: 560ms; }
