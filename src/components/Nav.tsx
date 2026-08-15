@@ -3,10 +3,9 @@ import { useActiveSection } from '../hooks/useActiveSection'
 
 const navLinks = [
   { label: 'Projects', href: '#projects' },
-  { label: 'Architecture', href: '#architecture' },
-  { label: 'Problem Solving', href: '#troubleshooting' },
   { label: 'Skills', href: '#skills' },
   { label: 'Awards', href: '#awards' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 const sectionIds = navLinks.map((l) => l.href.slice(1))

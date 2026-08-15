@@ -117,6 +117,34 @@ function ProjectChapter({ project }: { project: Project }) {
               </div>
             )}
 
+            {project.architectureImage && (
+              <div className="mt-10">
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  System Architecture
+                </p>
+                <div className={`border overflow-hidden ${isDark ? 'border-coal-line' : 'border-line'}`}>
+                  <div className="aspect-[16/9]">
+                    <img
+                      src={project.architectureImage}
+                      alt="STO 증권형 토큰 거래 플랫폼 시스템 아키텍처"
+                      loading="lazy"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  {project.architectureBullets && (
+                    <ul className={`p-6 space-y-2 border-t ${isDark ? 'border-coal-line' : 'border-line'}`}>
+                      {project.architectureBullets.map((b) => (
+                        <li key={b} className={`text-sm flex gap-2 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                          <span className="mt-0.5">—</span>
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            )}
+
           </div>
 
         </div>
