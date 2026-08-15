@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Architecture from './components/Architecture'
 import Troubleshooting from './components/Troubleshooting'
 import TechStack from './components/TechStack'
+import Awards from './components/Awards'
 import Footer from './components/Footer'
 import './index.css'
 
@@ -18,6 +19,7 @@ export default function App() {
       <Architecture />
       <Troubleshooting />
       <TechStack />
+      <Awards />
       <Footer />
     </main>
   )

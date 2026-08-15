@@ -3,6 +3,12 @@ interface Role {
   detail: string
 }
 
+interface Metric {
+  label: string
+  value: string
+  detail?: string
+}
+
 export interface Project {
   id: string
   title: string
@@ -15,6 +21,7 @@ export interface Project {
   github?: string
   demo?: string
   role?: Role[]
+  metrics?: Metric[]
 }
 
 export interface ArchitectureData {
@@ -64,6 +71,10 @@ export const projects: Project[] = [
     ],
     techStack: ['Spring MVC', 'JSP', 'MyBatis', 'PostgreSQL', 'Redis', 'Spring Security', 'AWS S3'],
     github: 'https://github.com/SHSWAcademy/SecondHandBooks',
+    metrics: [
+      { label: 'Load Test · 30 VU · 30분', value: '59.7ms', detail: 'p95 기준 · 에러율 0%' },
+      { label: 'Stress Test · 500 VU 점진적 증가', value: '1.85s', detail: 'p95 기준 · 에러율 0% · Auto Scaling 1→2대' },
+    ],
   },
   {
     id: '03',

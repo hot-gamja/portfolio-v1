@@ -7,7 +7,7 @@ export default function Footer() {
           {/* Name */}
           <div>
             <p className="font-semibold text-ink">이동희</p>
-            <p className="text-sm text-dim mt-0.5">Backend Developer</p>
+            <p className="text-sm text-dim mt-0.5">Full Stack Developer</p>
           </div>
 
           {/* Links */}

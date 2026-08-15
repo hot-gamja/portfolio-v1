@@ -93,6 +93,30 @@ function ProjectChapter({ project }: { project: Project }) {
               </div>
             )}
 
+            {project.metrics && (
+              <div>
+                <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                  부하 테스트 (k6)
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {project.metrics.map((m) => (
+                    <div
+                      key={m.label}
+                      className={`p-5 ${isDark ? 'bg-coal-2 border border-coal-line' : 'border border-line'}`}
+                    >
+                      <p className={`text-xs mb-3 ${isDark ? 'text-smoke' : 'text-dim'}`}>{m.label}</p>
+                      <p className={`text-3xl font-semibold tracking-[-0.04em] leading-none mb-2 ${isDark ? 'text-snow' : 'text-ink'}`}>
+                        {m.value}
+                      </p>
+                      {m.detail && (
+                        <p className={`text-xs ${isDark ? 'text-smoke' : 'text-dim'}`}>{m.detail}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
           </div>
 
         </div>
