@@ -25,7 +25,7 @@ export interface ArchitectureData {
 
 export const architectureProject: ArchitectureData = {
   title: 'STO — 증권형 토큰 거래 플랫폼',
-  architecture: '/sto-architecture.png',
+  architecture: `${import.meta.env.BASE_URL}sto-architecture.png`,
   systemBullets: [
     'NginX 리버스 프록시를 통해 React와 Main 서버를 분리 배포',
     'Main과 독립된 Match 서버가 TreeMap 오더북으로 체결 처리',
