@@ -37,7 +37,7 @@ export const architectureProject: ArchitectureData = {
     'NginX 리버스 프록시를 통해 React와 Main 서버를 분리 배포',
     'Main과 독립된 Match 서버가 TreeMap 오더북으로 체결 처리',
     'Redis Pub/Sub으로 체결 이벤트를 WebSocket에 실시간 전파',
-    'Off-chain 체결 내역을 Sepolia Testnet에 On-chain으로 기록',
+    'Spring Batch로 토큰 수익 배분과 블록체인 Outbox 기록을 처리하는 배치 서버를 별도 구성',
   ],
 }
 
@@ -49,8 +49,8 @@ export const projects: Project[] = [
     dark: false,
     duration: '2025.11 – 현재',
     teamSize: '개인 프로젝트',
-    description: 'Spring Boot로 직접 만들어 EC2에 배포해 운영 중인 개인 기술 블로그.',
-    techStack: ['Spring Boot', 'Thymeleaf', 'MyBatis', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'AWS'],
+    description: 'Spring Boot로 직접 만들어 EC2에 배포해 운영 중인 개인 기술 블로그. GitHub Actions로 Docker 이미지를 빌드해 GHCR에 push하고 EC2에 자동 배포되는 CI/CD 파이프라인을 직접 구성했습니다.',
+    techStack: ['Spring Boot', 'Thymeleaf', 'MyBatis', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'AWS', 'GitHub Actions'],
     github: 'https://github.com/hot-gamja/blog',
     demo: 'https://hotgamja.dev',
   },
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     role: [
       { title: '매칭 엔진 직접 설계', detail: 'Main과 분리된 Match 서버를 구축하고, TreeMap 오더북으로 O(log n) 호가 조회와 price-time priority 지정가 체결 구현' },
       { title: 'Race Condition 구조적 차단', detail: '주문 생성 중 수정·취소 요청이 끼어드는 문제를 PENDING 2-phase 트랜잭션으로 분리하고, 잔고 이중 차감은 비관적 락으로 방지, 데드락은 @Retryable로 자동 복구' },
-      { title: '금융 정산 정확성 확보', detail: 'float 연산을 BigDecimal로 전환하고, Math.multiplyExact로 오버플로우를 방지했으며, 체결가 차액 환급 누락과 N+1 문제 개선' },
+      { title: '금융 정산 정확성 확보', detail: 'float 연산을 BigDecimal로 전환하고, Math.multiplyExact로 오버플로우를 방지했으며, 체결가 차액 환급 누락 수정' },
       { title: '실시간 전파 구조 설계', detail: '회원·관리자 권한을 분리한 JWT 인증 구조를 설계하고, Redis Pub/Sub과 WebSocket으로 호가창·체결내역 실시간 전파 구현' },
       { title: '실시간 거래 UI 구현', detail: 'React로 호가창·캔들 차트·주문창을 구성하고, useTradingSocket 훅으로 STOMP 메시지를 구독해 화면에 실시간 반영' },
     ],

@@ -15,7 +15,7 @@ const cases = [
     titleEn: 'Race Condition on Transaction State',
     problem: '동시 요청 시 거래 상태 불일치 발생',
     cause: '두 사용자가 동시에 동일 도서를 구매 시도했을 때 트랜잭션 처리가 미흡해 상태가 중복 업데이트됨',
-    solution: '낙관적 락(Optimistic Lock) 도입, 충돌 감지 시 클라이언트에 재시도 응답 반환',
+    solution: '비관적 락(SELECT FOR UPDATE) 도입, 단일 트랜잭션만 상태를 변경할 수 있도록 구조적 차단',
     learned: '동시성 문제는 기능 완성 후 발견되기 쉬움. 상태 변경이 있는 API는 처음부터 동시성 시나리오를 고려해야 한다.',
   },
   {

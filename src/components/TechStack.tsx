@@ -44,6 +44,13 @@ const stacks = [
       { name: 'Tailwind CSS', desc: '유틸리티 기반 스타일링' },
     ],
   },
+  {
+    category: 'CI/CD',
+    items: [
+      { name: 'GitHub Actions', desc: 'Docker 빌드 → GHCR → EC2 자동 배포' },
+      { name: 'Jenkins', desc: 'Pipeline 기반 배포 자동화' },
+    ],
+  },
 ]
 
 export default function TechStack() {
@@ -61,7 +68,7 @@ export default function TechStack() {
             Tech Stack
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
             {stacks.map((group) => (
               <div key={group.category}>
                 <h3 className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-6">
