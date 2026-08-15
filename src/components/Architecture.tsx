@@ -9,7 +9,7 @@ export default function Architecture() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
 
         <div ref={ref} className="fade-in">
-          <p className="text-[11px] font-semibold tracking-[0.28em] text-smoke uppercase mb-3">
+          <p className="text-xs font-semibold tracking-[0.2em] text-smoke uppercase mb-3">
             Design
           </p>
           <h2 className="text-4xl sm:text-5xl font-semibold text-snow tracking-[-0.03em] mb-4">
@@ -27,7 +27,8 @@ export default function Architecture() {
             <div className="aspect-[16/9] bg-coal flex items-center justify-center">
               <img
                 src={architectureProject.architecture}
-                alt="System Architecture"
+                alt="STO 증권형 토큰 거래 플랫폼 시스템 아키텍처 — NginX 리버스 프록시, Main·Match·Batch 서버, Redis Pub/Sub, WebSocket 구조도"
+                loading="lazy"
                 className="w-full h-full object-contain p-4"
               />
             </div>

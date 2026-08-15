@@ -9,7 +9,7 @@ export default function Troubleshooting() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
 
         <div ref={ref} className="fade-in">
-          <p className="text-[11px] font-semibold tracking-[0.28em] text-dim uppercase mb-3">
+          <p className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-3">
             Problem Solving
           </p>
           <h2 className="text-4xl sm:text-5xl font-semibold text-ink tracking-[-0.03em] mb-4">
@@ -35,12 +35,12 @@ export default function Troubleshooting() {
 
                     <div className="space-y-2">
                       <p className="text-sm text-ink">
-                        <span className="text-red-500 mr-2">●</span>
+                        <span className="text-caution mr-2">●</span>
                         <span className="text-dim mr-1">원인</span>
                         {c.cause}
                       </p>
                       <p className="text-sm text-ink">
-                        <span className="text-blue-500 mr-2">●</span>
+                        <span className="text-resolve mr-2">●</span>
                         <span className="text-dim mr-1">해결</span>
                         {c.solution}
                       </p>

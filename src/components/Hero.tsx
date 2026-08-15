@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto w-full px-6 sm:px-10 lg:px-16 py-32">
 
         <div>
-            <p className="text-xs font-semibold tracking-[0.28em] text-dim uppercase mb-6">
+            <p className="text-xs font-semibold tracking-[0.2em] text-dim uppercase mb-6">
               Full Stack Developer
             </p>
 
@@ -22,12 +22,14 @@ export default function Hero() {
                 href="https://github.com/hot-gamja"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="GitHub 프로필 (새 탭에서 열림)"
                 className="text-ink pb-0.5 border-b border-transparent hover:border-ink transition-colors"
               >
                 GitHub
               </a>
               <a
                 href="mailto:abcd0701@naver.com"
+                aria-label="이메일 보내기"
                 className="text-ink pb-0.5 border-b border-transparent hover:border-ink transition-colors"
               >
                 Contact
@@ -39,7 +41,7 @@ export default function Hero() {
       {/* Bottom bar */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-line py-4">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
-<p className="text-xs font-semibold tracking-[0.24em] text-dim uppercase">
+          <p className="text-xs font-semibold tracking-[0.24em] text-dim uppercase">
             Selected Work ↓
           </p>
         </div>

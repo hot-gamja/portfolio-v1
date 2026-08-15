@@ -16,12 +16,14 @@ export default function Footer() {
               href="https://github.com/hot-gamja"
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub 프로필 (새 탭에서 열림)"
               className="text-dim pb-0.5 border-b border-transparent hover:border-dim transition-colors"
             >
               GitHub
             </a>
             <a
               href="mailto:abcd0701@naver.com"
+              aria-label="이메일 보내기"
               className="text-dim pb-0.5 border-b border-transparent hover:border-dim transition-colors"
             >
               Email

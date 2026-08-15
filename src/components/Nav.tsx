@@ -28,7 +28,7 @@ export default function Nav() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`transition-colors hover:text-ink ${isActive ? 'text-ink' : ''}`}
+                className={`pb-0.5 border-b transition-colors hover:text-ink ${isActive ? 'text-ink border-ink' : 'border-transparent'}`}
               >
                 {link.label}
               </a>
@@ -40,7 +40,8 @@ export default function Nav() {
         <button
           className="md:hidden flex flex-col gap-1.5 p-1"
           onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label="메뉴 열기"
+          aria-label={menuOpen ? '메뉴 닫기' : '메뉴 열기'}
+          aria-expanded={menuOpen}
         >
           <span className={`block w-5 h-px bg-ink transition-transform duration-200 ${menuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <span className={`block w-5 h-px bg-ink transition-opacity duration-200 ${menuOpen ? 'opacity-0' : ''}`} />
@@ -50,7 +51,7 @@ export default function Nav() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden border-t border-line bg-ivory/95 backdrop-blur-sm px-6 py-4 flex flex-col gap-4">
+        <div className="menu-drop md:hidden border-t border-line bg-ivory/95 backdrop-blur-sm px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => {
             const isActive = link.href === `#${activeId}`
             return (
