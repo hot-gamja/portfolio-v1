@@ -53,6 +53,11 @@ export const projects: Project[] = [
     techStack: ['Spring Boot', 'Thymeleaf', 'MyBatis', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'AWS', 'GitHub Actions'],
     github: 'https://github.com/hot-gamja/blog',
     demo: 'https://hotgamja.dev',
+    role: [
+      { title: 'CI/CD 파이프라인 구성', detail: 'GitHub Actions로 Docker 이미지 빌드 → GHCR push → EC2 자동 배포까지 전 과정 직접 구성' },
+      { title: '서버 사이드 렌더링', detail: 'Thymeleaf + MyBatis 기반으로 마크다운 파싱, 태그 필터링, 페이지네이션 등 블로그 핵심 기능 구현' },
+      { title: '운영 환경 직접 구성', detail: 'EC2 + Nginx 리버스 프록시 + RDS 연동, SSL 인증서 적용까지 인프라 전 과정 직접 셋업' },
+    ],
   },
   {
     id: '02',
