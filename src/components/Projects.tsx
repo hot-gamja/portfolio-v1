@@ -23,6 +23,7 @@ function ProjectChapter({ project }: { project: Project }) {
       <div ref={ref} className="fade-in max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16">
 
+
           {/* Left: meta */}
           <div>
             <p className={`text-6xl lg:text-7xl font-semibold tracking-[-0.05em] leading-none mb-6 ${isDark ? 'text-coal-line' : 'text-line'}`}>
@@ -144,48 +145,48 @@ function ProjectChapter({ project }: { project: Project }) {
               </div>
             )}
 
-            {archOpen && project.architectureImage && (
-              <div
-                className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
-                onClick={() => setArchOpen(false)}
-              >
-                <div
-                  className="modal-content bg-ivory max-w-5xl w-full max-h-[90vh] overflow-y-auto"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-line">
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-dim">System Architecture</p>
-                    <button
-                      onClick={() => setArchOpen(false)}
-                      className="text-dim hover:text-ink transition-colors text-lg leading-none"
-                      aria-label="닫기"
-                    >
-                      ✕
-                    </button>
-                  </div>
-                  <img
-                    src={project.architectureImage}
-                    alt={project.architectureAlt ?? `${project.title} 시스템 아키텍처`}
-                    className="w-full object-contain p-6"
-                  />
-                  {project.architectureBullets && (
-                    <ul className="px-6 pb-6 space-y-2 border-t border-line pt-4">
-                      {project.architectureBullets.map((b) => (
-                        <li key={b} className="text-sm flex gap-2 text-dim">
-                          <span className="mt-0.5">—</span>
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </div>
-            )}
-
           </div>
 
         </div>
       </div>
+
+      {archOpen && project.architectureImage && (
+        <div
+          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
+          onClick={() => setArchOpen(false)}
+        >
+          <div
+            className="modal-content bg-ivory max-w-5xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-line">
+              <p className="text-xs font-medium uppercase tracking-[0.2em] text-dim">System Architecture</p>
+              <button
+                onClick={() => setArchOpen(false)}
+                className="text-dim hover:text-ink transition-colors text-lg leading-none"
+                aria-label="닫기"
+              >
+                ✕
+              </button>
+            </div>
+            <img
+              src={project.architectureImage}
+              alt={project.architectureAlt ?? `${project.title} 시스템 아키텍처`}
+              className="w-full object-contain p-6"
+            />
+            {project.architectureBullets && (
+              <ul className="px-6 pb-6 space-y-2 border-t border-line pt-4">
+                {project.architectureBullets.map((b) => (
+                  <li key={b} className="text-sm flex gap-2 text-dim">
+                    <span className="mt-0.5">—</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
