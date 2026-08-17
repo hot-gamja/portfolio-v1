@@ -38,11 +38,11 @@ export const projects: Project[] = [
     description:
       '증권형 토큰(STO)을 실시간으로 매수·매도할 수 있는 거래 플랫폼. 지정가 주문이 오더북에 등록되어 가격·시간 우선으로 체결되며, 호가창과 체결내역이 실시간으로 업데이트됩니다.',
     role: [
-      { title: '매칭 엔진 설계 및 서버 계약', detail: 'Match 서버를 분리 구축해 TreeMap 오더북으로 O(log n) 호가 조회와 price-time priority 체결 구현. main·match·batch 서버 간 요청·응답 DTO와 상태값 기준을 구현 전 공통으로 확정해 필드 누락·타입 불일치 방지' },
+      { title: 'Match 서버 · Main 핵심 도메인 담당', detail: 'Match 서버 전체를 분리 구축해 TreeMap 오더북으로 O(log n) 호가 조회와 price-time priority 체결 구현. synchronized 매칭 루프로 단일 스레드 체결을 보장해 race-free 체결 순서 유지. Main 서버의 order(주문·체결·정산 흐름) · member(회원·계좌·보유수량) · auth 도메인을 직접 설계·구현. 서버 간 DTO와 상태값 기준을 구현 전 공통으로 확정해 필드 누락·타입 불일치 방지' },
       { title: 'Race Condition 구조적 차단', detail: '계좌·보유수량에는 락이 있었지만 Order 행 자체에 락이 없어 filledQuantity lost update가 발생하는 시나리오를 발견하고 findWithLockById 추가. PENDING 2-phase로 match 서버 연동 실패 시 compensateFailedOrder로 잔고 복구, 데드락은 @Retryable로 자동 복구' },
       { title: '금융 정산 정확성 확보', detail: 'float 연산을 BigDecimal로 전환하고, Math.multiplyExact로 오버플로우를 방지했으며, 체결가 차액 환급 누락 수정' },
       { title: '실시간 전파 구조 설계', detail: '회원·관리자 권한을 분리한 JWT 인증 구조를 설계하고, Redis Pub/Sub과 WebSocket으로 호가창·체결내역 실시간 전파 구현. 트랜잭션 커밋 후 이벤트를 발행해 미커밋 데이터 노출 방지' },
-      { title: '실시간 거래 UI 구현', detail: 'React로 호가창·캔들 차트·주문창을 구성하고, useTradingSocket 훅으로 STOMP 메시지를 구독해 화면에 실시간 반영' },
+      { title: '실시간 거래 UI 구현', detail: 'TradingPage 매매 화면과 HogaPanel(호가창) · ChartPanel(캔들 차트) · PriceRow 컴포넌트, 팀 전원이 사용한 공통 UI 8개(Modal · MiniChart 등)를 제작. useTradingSocket 훅으로 STOMP 메시지를 구독해 화면에 실시간 반영' },
     ],
     techStack: ['Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
     github: 'https://github.com/SHSWAcademy/STO',
