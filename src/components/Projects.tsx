@@ -1,9 +1,22 @@
+import { useState, useEffect } from 'react'
 import { useFadeIn } from '../hooks/useFadeIn'
 import { projects, type Project } from '../data/projects'
 
 function ProjectChapter({ project }: { project: Project }) {
   const ref = useFadeIn()
   const isDark = project.dark
+  const [archOpen, setArchOpen] = useState(false)
+
+  useEffect(() => {
+    if (!archOpen) return
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setArchOpen(false) }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [archOpen])
 
   return (
     <section className={isDark ? 'bg-coal' : 'border-t border-line'}>
@@ -122,19 +135,43 @@ function ProjectChapter({ project }: { project: Project }) {
                 <p className={`text-xs font-medium uppercase tracking-[0.2em] mb-4 ${isDark ? 'text-smoke' : 'text-dim'}`}>
                   System Architecture
                 </p>
-                <div className={`border overflow-hidden ${isDark ? 'border-coal-line' : 'border-line'}`}>
-                  <div className="aspect-[16/9]">
-                    <img
-                      src={project.architectureImage}
-                      alt="STO 증권형 토큰 거래 플랫폼 시스템 아키텍처"
-                      loading="lazy"
-                      className="w-full h-full object-contain p-4"
-                    />
+                <button
+                  onClick={() => setArchOpen(true)}
+                  className={`text-sm font-medium pb-0.5 border-b border-transparent hover:border-current transition-colors ${isDark ? 'text-snow' : 'text-ink'}`}
+                >
+                  아키텍처 보기 →
+                </button>
+              </div>
+            )}
+
+            {archOpen && project.architectureImage && (
+              <div
+                className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
+                onClick={() => setArchOpen(false)}
+              >
+                <div
+                  className="modal-content bg-ivory max-w-5xl w-full max-h-[90vh] overflow-y-auto"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-line">
+                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-dim">System Architecture</p>
+                    <button
+                      onClick={() => setArchOpen(false)}
+                      className="text-dim hover:text-ink transition-colors text-lg leading-none"
+                      aria-label="닫기"
+                    >
+                      ✕
+                    </button>
                   </div>
+                  <img
+                    src={project.architectureImage}
+                    alt="STO 증권형 토큰 거래 플랫폼 시스템 아키텍처"
+                    className="w-full object-contain p-6"
+                  />
                   {project.architectureBullets && (
-                    <ul className={`p-6 space-y-2 border-t ${isDark ? 'border-coal-line' : 'border-line'}`}>
+                    <ul className="px-6 pb-6 space-y-2 border-t border-line pt-4">
                       {project.architectureBullets.map((b) => (
-                        <li key={b} className={`text-sm flex gap-2 ${isDark ? 'text-smoke' : 'text-dim'}`}>
+                        <li key={b} className="text-sm flex gap-2 text-dim">
                           <span className="mt-0.5">—</span>
                           {b}
                         </li>
