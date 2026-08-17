@@ -28,6 +28,15 @@ export default function Hero() {
                 GitHub
               </a>
               <a
+                href="https://hotgamja.dev"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="기술 블로그 (새 탭에서 열림)"
+                className="text-ink pb-0.5 border-b border-transparent hover:border-ink transition-colors"
+              >
+                Blog
+              </a>
+              <a
                 href="mailto:abcd0701@naver.com"
                 aria-label="이메일 보내기"
                 className="text-ink pb-0.5 border-b border-transparent hover:border-ink transition-colors"

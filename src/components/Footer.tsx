@@ -22,6 +22,15 @@ export default function Footer() {
               GitHub
             </a>
             <a
+              href="https://hotgamja.dev"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="기술 블로그 (새 탭에서 열림)"
+              className="text-dim pb-0.5 border-b border-transparent hover:border-dim transition-colors"
+            >
+              Blog
+            </a>
+            <a
               href="mailto:abcd0701@naver.com"
               aria-label="이메일 보내기"
               className="text-dim pb-0.5 border-b border-transparent hover:border-dim transition-colors"

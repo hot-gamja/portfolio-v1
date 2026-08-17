@@ -23,6 +23,7 @@ export interface Project {
   role?: Role[]
   metrics?: Metric[]
   architectureImage?: string
+  architectureAlt?: string
   architectureBullets?: string[]
 }
 
@@ -46,6 +47,7 @@ export const projects: Project[] = [
     techStack: ['Spring Boot', 'Spring Security', 'JPA', 'PostgreSQL', 'Redis', 'WebSocket', 'React'],
     github: 'https://github.com/SHSWAcademy/STO',
     architectureImage: `${import.meta.env.BASE_URL}sto-architecture.png`,
+    architectureAlt: 'STO 증권형 토큰 거래 플랫폼 시스템 아키텍처',
     architectureBullets: [
       'NginX 리버스 프록시를 통해 React와 Main 서버를 분리 배포',
       'Main과 독립된 Match 서버가 TreeMap 오더북으로 체결 처리',

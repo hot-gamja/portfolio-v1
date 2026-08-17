@@ -165,7 +165,7 @@ function ProjectChapter({ project }: { project: Project }) {
                   </div>
                   <img
                     src={project.architectureImage}
-                    alt="STO 증권형 토큰 거래 플랫폼 시스템 아키텍처"
+                    alt={project.architectureAlt ?? `${project.title} 시스템 아키텍처`}
                     className="w-full object-contain p-6"
                   />
                   {project.architectureBullets && (
